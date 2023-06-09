@@ -1,0 +1,88 @@
+  body {
+    background-color: rgb(47, 47, 71);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 76vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Added to wrap the containers on smaller screens */
+  }
+  
+  #left, #right {
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    border: 2px solid rgb(204, 249, 243);
+  }
+
+ #left:hover,
+ #right:hover {
+  border: 2px dashed #45f3ff; /* Change border style to dashed on hover */
+  
+}
+
+  
+  .item {
+    background: #45f3ff;
+    height: 60px;
+    margin: 30px;
+    color: rgb(27, 30, 34);
+    display: flex;
+    align-items: center;
+    cursor: grab;
+  }
+  
+  .item img {
+    width: 30px;
+    margin-right: 15px;
+    margin-left: 20px;
+  }
+  
+  button#resetBtn {
+    background-color: rgb(131, 175, 189);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: auto; /* Changed to align the button to the right */
+    margin-right: auto; /* Added to center the button horizontally */
+    display: block; /* Added to make the button a block-level element */
+  }
+  
+  button#resetBtn:hover {
+    background-color: rgb(101, 145, 159);
+  }
+  
+  button#resetBtn:focus {
+    outline: none;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media screen and (max-width: 768px) {
+    #left, #right {
+      width: 100%; /* Adjusted to take the full width on smaller screens */
+      margin: 20px 0; /* Adjusted to create spacing between the containers */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .item {
+      height: 40px; /* Adjusted the height for smaller screens */
+      margin: 15px; /* Adjusted the margin for smaller screens */
+    }
+  
+    .item img {
+      width: 25px; /* Adjusted the image size for smaller screens */
+    }
+  }
